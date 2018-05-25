@@ -34,11 +34,47 @@ export class Age {
     let jupiterYears = Math.round(earthYears / 11.87);
     return jupiterYears;
   }
+  mercuryLifeExpectancyRemaining(lifeExpectancy)
+  {
+    let lifeExpectancyInSeconds = lifeExpectancy * 365 * 24 * 60 * 60;
+    let mercuryLifeExpectancyYears = this.mercurySecondsToYears(lifeExpectancyInSeconds);
+    let timeLeft = mercuryLifeExpectancyYears - this.mercurySecondsToYears(this.secondsAge);
+    if (timeLeft >= 0) {
+      return timeLeft
+    } else {
+      return (timeLeft * -1)
+    }
+  }
+  // venusLifeExpectancyRemaining(lifeExpectancy)
+  // {
+  //   let lifeExpectancyInSeconds = lifeExpectancy * 365 * 24 * 60 * 60;
+  //   let venusLifeExpectancyYears = venusSecondsToYears(lifeExpectancyInSeconds);
+  //   let timeLeft = venusLifeExpectancyYears - this.venusSecondsToYears(this.secondsAge);
+  //   return timeLeft;
+  // }
   earthLifeExpectancyRemaining(lifeExpectancy)
   {
-    // let lifeExpectancyInSeconds = lifeExpectancy * 365 * 24 * 60 * 60;
-    // let earthLifeExpectancyYears = earthSecondsToYears(lifeExpectancyInSeconds);
-    let timeLeft = lifeExpectancy - this.earthSecondsToYears(this.secondsAge);
-    return timeLeft;
+    let lifeExpectancyInSeconds = lifeExpectancy * 365 * 24 * 60 * 60;
+    let earthLifeExpectancyYears = this.earthSecondsToYears(lifeExpectancyInSeconds);
+    let timeLeft = earthLifeExpectancyYears - this.earthSecondsToYears(this.secondsAge);
+    if (timeLeft >= 0) {
+      return timeLeft
+    } else {
+      return (timeLeft * -1)
+    }
   }
+  // marsLifeExpectancyRemaining(lifeExpectancy)
+  // {
+  //   let lifeExpectancyInSeconds = lifeExpectancy * 365 * 24 * 60 * 60;
+  //   let marsLifeExpectancyYears = marsSecondsToYears(lifeExpectancyInSeconds);
+  //   let timeLeft = marsLifeExpectancyYears - this.marsSecondsToYears(this.secondsAge);
+  //   return timeLeft;
+  // }
+  // jupiterLifeExpectancyRemaining(lifeExpectancy)
+  // {
+  //   let lifeExpectancyInSeconds = lifeExpectancy * 365 * 24 * 60 * 60;
+  //   let jupiterLifeExpectancyYears = jupiterSecondsToYears(lifeExpectancyInSeconds);
+  //   let timeLeft = jupiterLifeExpectancyYears - this.jupiterSecondsToYears(this.secondsAge);
+  //   return timeLeft;
+  // }
 }

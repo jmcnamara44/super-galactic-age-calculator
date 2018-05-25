@@ -30,8 +30,17 @@ describe("Age", function() {
   it("should test if age calculation for Jupiter works", function() {
     expect(reusableTestAge.jupiterSecondsToYears(reusableTestAge.secondsAge)).toEqual(2);
   });
-  it("should test how much longer use has to live based on their inputted life expectancy", function() {
+  it("should test how much longer use has to live on earth based on their inputted life expectancy", function() {
     let lifeExpectancy = 72;
+    let middleAgesLifeExpectancy = 17;
     expect(reusableTestAge.earthLifeExpectancyRemaining(lifeExpectancy)).toEqual(54);
+    expect(reusableTestAge.earthLifeExpectancyRemaining(middleAgesLifeExpectancy)).toEqual(1);
   });
+  it("should test how much longer use has to live on mercury based on their inputted life expectancy", function() {
+    let lifeExpectancy = 72;
+    let middleAgesLifeExpectancy = 17;
+    expect(reusableTestAge.mercuryLifeExpectancyRemaining(lifeExpectancy)).toEqual(223);
+    expect(reusableTestAge.mercuryLifeExpectancyRemaining(middleAgesLifeExpectancy)).toEqual(6);
+  });
+
 });
