@@ -16,18 +16,18 @@ describe("Age", function() {
     expect(testAge.ageInSeconds()).toEqual(3542400);
   });
   it("should test if age calculation for Mercury works", function() {
-    expect(reusableTestAge.mercuryAgeYears()).toEqual(77);
+    expect(reusableTestAge.mercuryAgeYears(reusableTestAge.ageInSeconds())).toEqual(77);
   });
   it("should test if age calculation for Venus works", function() {
-    expect(reusableTestAge.venusAgeYears()).toEqual(30);
+    expect(reusableTestAge.venusAgeYears(reusableTestAge.ageInSeconds())).toEqual(30);
   });
   it("should test if age calculation for Earth works", function() {
-    expect(reusableTestAge.earthAgeYears()).toEqual(18);
+    expect(reusableTestAge.earthAgeYears(reusableTestAge.ageInSeconds())).toEqual(18);
   });
   it("should test if age calculation for Mars works", function() {
-    expect(reusableTestAge.marsAgeYears()).toEqual(10);
+    expect(reusableTestAge.marsAgeYears(reusableTestAge.ageInSeconds())).toEqual(10);
   });
   it("should test if age calculation for Jupiter works", function() {
-    expect(reusableTestAge.jupiterAgeYears()).toEqual(2);
+    expect(reusableTestAge.jupiterAgeYears(reusableTestAge.ageInSeconds())).toEqual(2);
   });
 });
