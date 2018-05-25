@@ -3,39 +3,40 @@ export class Age {
   {
     this.birthday = birthday;
     this.compareToDate = compareToDate;
+    this.secondsAge = (compareToDate - birthday)/1000;
   }
-  ageInSeconds()
+  mercurySecondsToYears(seconds)
   {
-    let secondsAge = ((this.compareToDate - this.birthday)/1000);
-    return secondsAge;
+    let earthYears = (seconds/86400/365);
+    let mercuryYears = Math.round(earthYears / .24);
+    return mercuryYears;
   }
-  mercuryAgeYears(earthSecondsAge)
+  venusSecondsToYears(seconds)
   {
-    let earthAge = (earthSecondsAge/86400/365);
-    let mercuryAge = Math.round(earthAge / .24);
-    return mercuryAge;
+    let earthYears = (seconds/86400/365);
+    let venusYears = Math.round(earthYears / .62);
+    return venusYears;
   }
-  venusAgeYears(earthSecondsAge)
+  earthSecondsToYears(seconds)
   {
-    let earthAge = (earthSecondsAge/86400/365);
-    let venusAge = Math.round(earthAge / .62);
-    return venusAge;
+    let earthYears = Math.round(seconds/86400/365);
+    return earthYears;
   }
-  earthAgeYears(earthSecondsAge)
+  marsSecondsToYears(seconds)
   {
-    let earthAge = Math.round(earthSecondsAge/86400/365);
-    return earthAge;
+    let earthYears = (seconds/86400/365);
+    let marsYears = Math.round(earthYears / 1.88);
+    return marsYears;
   }
-  marsAgeYears(earthSecondsAge)
+  jupiterSecondsToYears(seconds)
   {
-    let earthAge = (earthSecondsAge/86400/365);
-    let marsAge =Math.round( earthAge / 1.88);
-    return marsAge;
+    let earthYears = (seconds/86400/365);
+    let jupiterYears = Math.round(earthYears / 11.87);
+    return jupiterYears;
   }
-  jupiterAgeYears(earthSecondsAge)
-  {
-    let earthAge = (earthSecondsAge/86400/365);
-    let jupiterAge = Math.round(earthAge / 11.87);
-    return jupiterAge;
-  }
+  // earthLifeExpectancyRemaining(lifeExpectancy)
+  // {
+  //   let timeLeft = lifeExpectancy - this.earthAgeYears();
+  //   return timeLeft;
+  // }
 }
