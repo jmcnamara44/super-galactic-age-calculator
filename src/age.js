@@ -34,9 +34,11 @@ export class Age {
     let jupiterYears = Math.round(earthYears / 11.87);
     return jupiterYears;
   }
-  // earthLifeExpectancyRemaining(lifeExpectancy)
-  // {
-  //   let timeLeft = lifeExpectancy - this.earthAgeYears();
-  //   return timeLeft;
-  // }
+  earthLifeExpectancyRemaining(lifeExpectancy)
+  {
+    // let lifeExpectancyInSeconds = lifeExpectancy * 365 * 24 * 60 * 60;
+    // let earthLifeExpectancyYears = earthSecondsToYears(lifeExpectancyInSeconds);
+    let timeLeft = lifeExpectancy - this.earthSecondsToYears(this.secondsAge);
+    return timeLeft;
+  }
 }
