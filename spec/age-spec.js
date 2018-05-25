@@ -42,5 +42,22 @@ describe("Age", function() {
     expect(reusableTestAge.mercuryLifeExpectancyRemaining(lifeExpectancy)).toEqual(223);
     expect(reusableTestAge.mercuryLifeExpectancyRemaining(middleAgesLifeExpectancy)).toEqual(6);
   });
-
+  it("should test how much longer use has to live on venus based on their inputted life expectancy", function() {
+    let lifeExpectancy = 72;
+    let middleAgesLifeExpectancy = 17;
+    expect(reusableTestAge.venusLifeExpectancyRemaining(lifeExpectancy)).toEqual(86);
+    expect(reusableTestAge.venusLifeExpectancyRemaining(middleAgesLifeExpectancy)).toEqual(3);
+  });
+  it("should test how much longer use has to live on mars based on their inputted life expectancy", function() {
+    let lifeExpectancy = 72;
+    let middleAgesLifeExpectancy = 17;
+    expect(reusableTestAge.marsLifeExpectancyRemaining(lifeExpectancy)).toEqual(28);
+    expect(reusableTestAge.marsLifeExpectancyRemaining(middleAgesLifeExpectancy)).toEqual(1);
+  });
+  it("should test how much longer use has to live on jupiter based on their inputted life expectancy", function() {
+    let lifeExpectancy = 72;
+    let middleAgesLifeExpectancy = 17;
+    expect(reusableTestAge.jupiterLifeExpectancyRemaining(lifeExpectancy)).toEqual(4);
+    expect(reusableTestAge.jupiterLifeExpectancyRemaining(middleAgesLifeExpectancy)).toEqual(1);
+  });
 });
